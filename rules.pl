@@ -10,10 +10,3 @@ normal_weight( Weight, Size, Z ) :- bmi( Weight, Size, Z ), Z > 19, Z < 25.
 overweight( Weight, Size, Z ) :- bmi( Weight, Size, Z ), Z > 25, Z < 30.
 obese( Weight, Size, Z ) :-  bmi( Weight, Size, Z ), Z > 30. 
 
-
-verify( Weight, Size ) :-
-    callable(Weight), callable(Size);
-     low_weight(  Weight, Size, Z ) -> write('low');
-     normal_weight(  Weight, Size, Z ) -> write('normal');
-     overweight(  Weight, Size, Z ) -> write('overweight');
-     obese(  Weight, Size, Z )-> write('obese').
